@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f1ea;
+  color: #1c1a16;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  background: #2f3b2c;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button.on {
+  outline: 2px solid #c4a35a;
+}
+
+#panel, footer {
+  background: #fff;
+  border: 1px solid #d7d0c4;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+footer {
+  margin-top: 12px;
+}
+
+label, .block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+textarea, input[type="text"], input[type="date"], input:not([type="checkbox"]):not([type="file"]) {
+  border: 1px solid #b7ad9d;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+.check {
+  flex-direction: row;
+  align-items: center;
+}
+
+fieldset {
+  border: 1px solid #d7d0c4;
+  margin: 8px 0;
+}
+
+.trow {
+  display: grid;
+  grid-template-columns: 140px 110px 120px 1fr 180px auto;
+  gap: 8px;
+  align-items: end;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+}
+
+.shown {
+  font-variant-numeric: tabular-nums;
+  padding-bottom: 6px;
+}
+
+.lz-pick {
+  position: relative;
+}
+
+.lz-matches {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #b7ad9d;
+  border-radius: 4px;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.lz-matches button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  color: #1c1a16;
+  border-radius: 0;
+}
+
+.lz-matches button.active,
+.lz-matches button:hover {
+  background: #e7efe4;
+}
+
+.hint, #status {
+  color: #5c564c;
+  font-size: 0.92rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+}
+
+@media (max-width: 800px) {
+  .trow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
